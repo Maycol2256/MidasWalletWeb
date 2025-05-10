@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MidasWallet</title>
+    <link rel="icon" href="Recursos/ic_launcher_round.webp" type="image/x-icon">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <main>
+        <h1> MidasWallet</h1>
+        <div class="image-container">
+            <img class="front-image" src="Recursos/MidasWallet.png" alt="Logo MidasWallet">
+            <img class="back-image" src="Recursos/QR.png" alt="QR Descarga">
+        </div>
+        <h1>!Descarga Aqui nuestra aplicación¡</h1>
+        <a href="Recursos/app-release-unsigned.apk" download="app-release-unsigned.apk">
+        <button>Descargar APK</button>
+        </a>
+        <h2>Nuestra aplicacion pretende ayudar a cada uno de nuestros usuarios con sus finanzas personales y asi facilitar la gestion de su dinero.</h2>
+        <h2>Oprime el logo de MidasWallet para optener el codigo QR</h2>
+    </main>
+    <footer>
+        <h2>Derechos reservados 2025 MidasWallet©</h2>
+    </footer>
+    <script>
+        const imageContainer = document.querySelector('.image-container');
+        imageContainer.addEventListener('click', () => {
+            imageContainer.classList.toggle('flipped');
+        });
+    </script>
+</body>
+</html>
