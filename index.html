@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MidasWallet</title>
+    <link rel="icon" href="Recursos/ic_launcher_round.webp" type="image/x-icon">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <main>
+        <h1> MidasWallet</h1>
+        <div class="image-container">
+            <img class="front-image" src="Recursos/MidasWallet.png" alt="Logo MidasWallet">
+            <img class="back-image" src="Recursos/QR.png" alt="QR Descarga">
+        </div>
+
+        <!-- Advertencia -->
+        <div class="warning">
+            <p><strong>¡Advertencia!</strong> Antes de descargar la aplicación, te recomendamos leer nuestras <a href="politicas.html">Políticas de Privacidad y Términos de Uso.</a></p>
+        </div>
+
+        <!-- Botón de descarga -->
+        <a href="Recursos/app-release-unsigned.apk" download="app-release-unsigned.apk">
+            <button class="download-btn">Descargar APK</button>
+        </a>
+
+        <h2>Nuestra aplicación pretende ayudar a cada uno de nuestros usuarios con sus finanzas personales y así facilitar la gestión de su dinero.</h2>
+        <h2>Oprime el logo de MidasWallet para obtener el código QR.</h2>
+
+        <!-- Botón para redirigir a la página de políticas -->
+        <a href="Politicas.html">
+            <button class="policies-btn">Ver Políticas</button>
+        </a>
+    </main>
+
+    <footer>
+        <h2>Derechos reservados 2025 DevUp©</h2>
+    </footer>
+
+    <script>
+        const imageContainer = document.querySelector('.image-container');
+        imageContainer.addEventListener('click', () => {
+            imageContainer.classList.toggle('flipped');
+        });
+    </script>
+</body>
+</html>

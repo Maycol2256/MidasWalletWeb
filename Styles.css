@@ -1,0 +1,169 @@
+body {
+    font-family: sans-serif;
+    background-color: #000;
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* Cambiar a flex-start para evitar que el contenido quede demasiado alto */
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    background-color: #111;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 80%;
+    width: 100%;
+    margin: 20px auto;  /* Centramos el main */
+}
+
+h1 {
+    color: #cfa255;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.image-container {
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 20px;
+    perspective: 1000px; 
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.front-image, .back-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: transform 0.8s ease-in-out; 
+}
+
+.back-image {
+    transform: rotateY(180deg); 
+}
+
+.image-container.flipped .front-image {
+    transform: rotateY(180deg);
+}
+
+.image-container.flipped .back-image {
+    transform: rotateY(0deg);
+}
+
+/* Estilos para la advertencia */
+.warning {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+.warning a {
+    color: #cfa255;
+    text-decoration: underline;
+}
+
+.warning a:hover {
+    color: #fff;
+}
+
+/* Estilos para los botones */
+.download-btn, .policies-btn {
+    background-color: #cfa255;
+    color: #000;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.download-btn:hover, .policies-btn:hover {
+    background-color: #d19b61;
+}
+
+/* Botón para ver políticas */
+.policies-btn {
+    background-color: #444;
+    color: #cfa255;
+    border: 2px solid #cfa255;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.policies-btn:hover {
+    background-color: #cfa255;
+    color: #000;
+}
+
+/* Estilos para las tarjetas */
+.cards-container {
+    display: flex;  /* Cambiar de grid a flexbox */
+    flex-wrap: wrap;  /* Para que las tarjetas se ajusten en filas si es necesario */
+    justify-content: center; /* Centrar las tarjetas horizontalmente */
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Las tarjetas deben ocupar el 100% del ancho disponible */
+    max-width: 500px; /* Limitar el ancho máximo de las tarjetas */
+    text-align: left;
+}
+
+.card h2 {
+    color: #cfa255;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.card-content h3 {
+    color: #bbb;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.card-content p {
+    color: #ddd;
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+footer {
+    color: #777;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #111;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+footer h2 {
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
